@@ -58,19 +58,18 @@ class DragButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.blue
         draggable = true
         autoDocking = true
         singleClickBeenCancled = false
-        longPressGestureRecognizer =
-            UILongPressGestureRecognizer(target: self, action: #selector(gestureRecognizerHandle(_:)))
-        
-        guard let longPressGestureRecognizer = self.longPressGestureRecognizer else {
-            return
-        }
-        longPressGestureRecognizer.allowableMovement = 0
-        //添加长按事件
-        self.addGestureRecognizer(longPressGestureRecognizer)
+//        longPressGestureRecognizer =
+//            UILongPressGestureRecognizer(target: self, action: #selector(gestureRecognizerHandle(_:)))
+//        
+//        guard let longPressGestureRecognizer = self.longPressGestureRecognizer else {
+//            return
+//        }
+//        longPressGestureRecognizer.allowableMovement = 0
+//        //添加长按事件
+//        self.addGestureRecognizer(longPressGestureRecognizer)
     }
 
     //MARK: - 要区分开单双击
@@ -92,16 +91,16 @@ class DragButton: UIButton {
         clickClosure(self)
     }
 
-    //MARK: - 长按
-    func gestureRecognizerHandle(_ gestureRecognizer : UILongPressGestureRecognizer) {
-        switch gestureRecognizer.state {
-        case .began:
-            print("")//长按block
-            break
-        default:
-            break
-        }
-    }
+    //MARK: - 长按，暂时不需要
+//    func gestureRecognizerHandle(_ gestureRecognizer : UILongPressGestureRecognizer) {
+//        switch gestureRecognizer.state {
+//        case .began:
+//            print("")//长按block
+//            break
+//        default:
+//            break
+//        }
+//    }
     
     //MARK: - 拖拽开始
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

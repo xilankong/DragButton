@@ -48,6 +48,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dragBtn.backgroundColor = UIColor.red
         view.addSubview(dragBtn);
     }
 

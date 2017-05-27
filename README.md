@@ -7,3 +7,5 @@
 3、swift 语言，只需引入一个文件
 
 4、支持直接添加到View、添加到keyWindow
+
+![](https://github.com/xilankong/DragButton/blob/master/drag.gif)
